@@ -1,7 +1,7 @@
-#ifndef INTERNET_PROTOCOL
-#define INTERNET_PROTOCOL
+#ifndef INTERNET_USAGE
+#define INTERNET_USAGE
 #include "constants.h"
-struct time {
+struct timer {
 	int hours;
 	int minutes;
 	int seconds;
@@ -15,9 +15,9 @@ struct path {
 struct bytes {
 	unsigned int number;
 };
-struct iternet_protocol {
-	time start;
-	time finish;
+struct internet_usage {
+	timer start;
+	timer finish;
 	bytes sent;
 	bytes recieved;
 	path program;
