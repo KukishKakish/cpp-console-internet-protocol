@@ -4,7 +4,7 @@
 struct time {
 	int hours;
 	int minutes;
-	int seconds
+	int seconds;
 };
 struct path {
 	char disk [MAX_STRING_SIZE];
