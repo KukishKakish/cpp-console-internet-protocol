@@ -1,7 +1,6 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
-
 #include "internet_usage.h"
 #include "file_reader.h"
 #include "constants.h"
@@ -15,21 +14,30 @@ int main() {
     int size;
     try {
         read("data.txt", usage, size);
+        cout << "***** Протокол работы в Интернете *****\n\n";
         for (int i = 0; i < size; i++) {
+            cout << "Время начала сеанса.........: ";
+            cout << setw(4) << setfill('0') << usage[i]->start.hours << ' ';
+            cout << setw(2) << setfill('0') << usage[i]->start.minutes << ' ';
+            cout << setw(2) << setfill('0') << usage[i]->start.seconds << '\n';
 
-            cout << usage[i]->finish.hours << ' ';
-            cout << usage[i]->finish.minutes << ' ';
-            cout << usage[i]->finish.seconds << '\n';
-            cout << usage[i]->start.hours << ' ';
-            cout << usage[i]->start.minutes << ' ';
-            cout << usage[i]->start.seconds << '\n';
+            cout << "Время завершения сеанса.....: ";
+            cout << setw(4) << setfill('0') << usage[i]->finish.hours << ' ';
+            cout << setw(2) << setfill('0') << usage[i]->finish.minutes << ' ';
+            cout << setw(2) << setfill('0') << usage[i]->finish.seconds << '\n';
 
+            cout << "Получено данных.............: ";
             cout << usage[i]->recieved.number << '\n';
+            cout << "Отправлено данных......:";
             cout << usage[i]->sent.number << '\n';
 
+            cout << "Программа находится на диске: ";
             cout << usage[i]->program.disk << '\n';
+            cout << "в поддериктории дериктории..: ";
             cout << usage[i]->program.users << '\n';
+            cout << "в директории пользователя...: ";
             cout << usage[i]->program.user1 << '\n';
+            cout << "под названием...............: ";
             cout << usage[i]->program.programm << '\n';
             cout << '\n';
         }
