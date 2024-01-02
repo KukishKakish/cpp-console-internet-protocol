@@ -5,6 +5,7 @@ using namespace std;
 #include "file_reader.h"
 #include "constants.h"
 
+<<<<<<< HEAD
 int main() {
     setlocale(LC_ALL, "Russian");
     cout << "Лабораторная работа №9. GIT\n";
@@ -53,3 +54,13 @@ int main() {
         }
         return 0;
     }
+=======
+int main()
+{
+    cout << "Laboratory work #9. GIT\n";
+    cout << "Variant #5. Internet Protocol\n";
+    cout << "Author: Krapiventsew D.\n";
+    cout << "Group: PInj1_d\n";
+    return 0;
+}
+>>>>>>> data
