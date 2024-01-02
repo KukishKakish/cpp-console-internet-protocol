@@ -56,7 +56,7 @@ void read(const char* file_name, internet_usage* array[], int& size) {
 		}
 		file.close();
 	}
-		else{
+	else {
 		throw "Ошибка открытия файла";
+	}
 }
-
