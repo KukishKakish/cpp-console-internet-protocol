@@ -23,6 +23,6 @@ bool check_internet_usage_by_program_name(internet_usage* element)
  
 bool check_internet_usage_by_time(internet_usage* element)
 {
-	return element->start.hours > 8;
+	return element->start.hours>8;
 }
 
